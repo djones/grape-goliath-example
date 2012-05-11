@@ -3,7 +3,7 @@ require "bundler/setup"
 require 'goliath'
 require 'em-synchrony/activerecord'
 require 'grape'
-require './app/api/posts_api'
+require './app/apis/posts_api'
 require './app/models/post'
 
 class Application < Goliath::API
