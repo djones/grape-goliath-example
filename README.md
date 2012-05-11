@@ -50,7 +50,7 @@ Now you see your first post has shown up.
 
 # Next Steps
 
-This is just a basic Grape API example. You can see the post specified in `app/api/posts_api.rb`. You could expand that API and add your own models in `app/models`.
+This is just a basic Grape API example. You can see the post specified in `app/api/posts.rb`. You could expand that API and add your own models in `app/models`.
 
 # Deploy on Heroku
 
