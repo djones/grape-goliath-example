@@ -16,6 +16,9 @@ Together you can create a highly scalable API and use the nice features of Grape
 
 ## Getting Started
 
+    git clone git@github.com:djones/grape-goliath-example.git
+    cd grape-goliath-example/
+
 Create and migrate your database with:
 
     rake db:setup
@@ -29,7 +32,7 @@ Next let's list all the posts in the database:
     curl http://localhost:9000/v1/posts.json
     => []
   
-There are none yet.
+A blank array in response tells us there are no posts yet.
 
 ## Adding a Post
 
@@ -57,8 +60,12 @@ First we create a new Heroku application
 Next we push the code to Heroku
   
     git push heroku master
+    
+Finally we need to migrate the database on Heroku
 
-You'll see a URL at the end of your deploy. Use that to fill in the YOURAPPNAME in the next step.
+    heroku run rake db:migrate RACK_ENV=production
+
+Now you should be able to request posts from your app and get an empty array back as there are no posts saved yet.
  
     curl http://YOURAPPNAME.herokuapp.com/v1/posts.json
     => []
@@ -93,4 +100,4 @@ Create and migrate your database with
 # Todo
 
 * Unify all the 'require' statements.
-* Make it work with databases other than Postgres
+* Make it work with databases other than Postgres.
