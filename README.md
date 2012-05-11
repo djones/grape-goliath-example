@@ -12,6 +12,7 @@ Together you can create a highly scalable API and use the nice features of Grape
 * ActiveRecord models
 * Postgres
 * Non-blocking adapters and dependancies
+* DB migration and associated Rake tasks
 * Deployment on Heroku
 
 ## Getting Started
