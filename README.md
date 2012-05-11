@@ -75,23 +75,31 @@ Next you could use the "Adding a Post" example above to write your first post to
 
 # Extras
 
-*Locally only*, you can use Rails-like database commands.
+You can use Rails-like database commands.
 
-Drop your database with:
+## Locally only, you can:
+
+Drop your database:
 
     rake db:drop
 
-Create your database with:
+Create your database:
 
     rake db:create
   
-Migrate your database with:
+Migrate your database:
 
     rake db:migrate
   
-Create and migrate your database with
+Create and migrate your database:
 
     rake db:setup
+    
+## On Heroku, you can:
+
+Migrate your database:
+
+    heroku run rake db:migrate RACK_ENV=production
 
 # Resources
 
