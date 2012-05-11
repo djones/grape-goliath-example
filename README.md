@@ -102,3 +102,6 @@ Create and migrate your database with
 
 * Unify all the 'require' statements.
 * Make it work with databases other than Postgres.
+* Write some tests using the API
+* Add some example authentication
+* Add support for multiple environments e.g. test, development and production
