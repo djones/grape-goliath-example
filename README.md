@@ -1,4 +1,4 @@
-# [Grape](https://github.com/intridea/grape) + [Goliath](https://github.com/postrank-labs/goliath) Example
+# [Grape](https://github.com/intridea/grape) + [Goliath](https://github.com/postrank-labs/goliath) Example Application
 
 ## What is this?
 
@@ -7,9 +7,9 @@
 
 Together you can create a highly scalable API and use the nice features of Grape to specify how your REST API will work.
 
-## Example features:
+## Example Features
 
-* ActiveRecord models
+* ActiveRecord
 * Postgres
 * Non-blocking adapters and dependancies
 * DB migration and associated Rake tasks
