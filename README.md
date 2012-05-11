@@ -7,7 +7,7 @@
 
 Together you can create a highly scalable API and use the nice features of Grape to specify how your REST API will work.
 
-This example features:
+## Example features:
 
 * ActiveRecord models
 * Postgres
@@ -18,15 +18,15 @@ This example features:
 
 Create and migrate your database with:
 
-    $> rake db:setup
+    rake db:setup
   
 Start the server and you're done!
 
-    $> ruby server.rb -vs
+    ruby server.rb -vs
 
 Next let's list all the posts in the database:
 
-    $> curl http://localhost:9000/v1/posts.json
+    curl http://localhost:9000/v1/posts.json
     => []
   
 There are none yet.
@@ -35,11 +35,11 @@ There are none yet.
 
 We do a HTTP post to create a new post.
 
-    $> curl -X POST -d '{"post":{"title":"David Jones","body":"this is my message"}}' http://localhost:9000/v1/posts/create
+    curl -X POST -d '{"post":{"title":"David Jones","body":"this is my message"}}' http://localhost:9000/v1/posts/create
 
 Now let's list all the posts again.
   
-    $> curl http://localhost:9000/v1/posts.json
+    curl http://localhost:9000/v1/posts.json
     => [{"body":"this is my message","created_at":"2012-05-11T13:35:03-07:00","id":1,"title":"David Jones","updated_at":"2012-05-11T13:35:03-07:00"}]
 
 Now you see your first post has shown up.
@@ -52,15 +52,15 @@ This is just a basic Grape API example. You can see the post specified in `app/a
 
 First we create a new Heroku application
 
-    $> heroku create --stack cedar YOURAPPNAME
+    heroku create --stack cedar YOURAPPNAME
   
 Next we push the code to Heroku
   
-    $> git push heroku master
+    git push heroku master
 
 You'll see a URL at the end of your deploy. Use that to fill in the YOURAPPNAME in the next step.
  
-    $> curl http://YOURAPPNAME.herokuapp.com/v1/posts.json
+    curl http://YOURAPPNAME.herokuapp.com/v1/posts.json
     => []
   
 Next you could use the "Adding a Post" example above to write your first post to the server.
@@ -71,19 +71,19 @@ Next you could use the "Adding a Post" example above to write your first post to
 
 Drop your database with:
 
-    $> rake db:drop
+    rake db:drop
 
 Create your database with:
 
-    $> rake db:create
+    rake db:create
   
 Migrate your database with:
 
-    $> rake db:migrate
+    rake db:migrate
   
 Create and migrate your database with
 
-    $> rake db:setup
+    rake db:setup
 
 # Resources
 
