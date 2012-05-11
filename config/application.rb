@@ -7,7 +7,7 @@ require 'erb'
 db = URI.parse(ENV['DATABASE_URL'] || 'http://localhost')
 if db.scheme == 'postgres' # Heroku environment
   ActiveRecord::Base.establish_connection(
-    :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+    :adapter  => db.scheme == 'postgres' ? 'em_postgresql' : db.scheme,
     :host     => db.host,
     :username => db.user,
     :password => db.password,
