@@ -16,7 +16,7 @@ Together you can create a highly scalable API and use the nice features of Grape
 
 ## Getting Started
 
-    git clone git@github.com:djones/grape-goliath-example.git
+    git clone https://github.com/djones/grape-goliath-example.git
     cd grape-goliath-example/
 
 Create and migrate your database with:
