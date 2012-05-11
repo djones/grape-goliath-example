@@ -10,7 +10,7 @@ Together you can create a highly scalable API and use the nice features of Grape
 ## Example Features
 
 * ActiveRecord
-* Postgres
+* PostgreSQL
 * Non-blocking adapters and dependancies
 * DB migration and associated Rake tasks
 * Deployment on Heroku
@@ -109,7 +109,7 @@ Migrate your database:
 # Todo
 
 * Unify all the 'require' statements.
-* Make it work with databases other than Postgres.
-* Write some tests using the API
-* Add some example authentication
-* Add support for multiple environments e.g. test, development and production
+* Make it work with databases other than PostgreSQL.
+* Write some tests using the API.
+* Add some example authentication.
+* Add support for multiple environments e.g. test, development and production.
