@@ -1,4 +1,4 @@
-# [Grape](https://github.com/intridea/grape) + [Goliath](https://github.com/postrank-labs/goliath) Example Application
+# [Grape](https://github.com/intridea/grape) + [Goliath](https://github.com/postrank-labs/goliath) Example REST API
 
 ## What is this?
 
@@ -6,14 +6,6 @@
 * Goliath is a non-blocking Ruby web server
 
 Together you can create a highly scalable API and use the nice features of Grape to specify how your REST API will work.
-
-## Example Features
-
-* ActiveRecord
-* PostgreSQL
-* Non-blocking adapters and dependancies
-* DB migration and associated Rake tasks
-* Deployment on Heroku
 
 ## Getting Started
 
