@@ -69,7 +69,7 @@ Next you could use the "Adding a Post" example above to write your first post to
 
 You can use Rails-like database commands.
 
-## Locally only, you can:
+### Locally, you can:
 
 Drop your database:
 
@@ -87,7 +87,7 @@ Create and migrate your database:
 
     rake db:setup
     
-## On Heroku, you can:
+### On Heroku, you can:
 
 Migrate your database:
 
