@@ -17,7 +17,7 @@ First take a copy of the project
 Next create and migrate your database
 
     rake db:setup
-  
+
 Finally start the server and you're done!
 
     ruby server.rb -vs
@@ -26,7 +26,7 @@ Now let's list all the posts in the database:
 
     curl http://localhost:9000/v1/posts.json
     => []
-  
+
 A blank array in response tells us there are no posts yet.
 
 ## Adding a Post
@@ -34,7 +34,7 @@ A blank array in response tells us there are no posts yet.
     curl -X POST -d '{"post":{"title":"David Jones","body":"this is my message"}}' http://localhost:9000/v1/posts/create
 
 Now list all the posts again
-  
+
     curl http://localhost:9000/v1/posts.json
     => [{"body":"this is my message","created_at":"2012-05-11T13:35:03-07:00","id":1,"title":"David Jones","updated_at":"2012-05-11T13:35:03-07:00"}]
 
@@ -49,20 +49,20 @@ This is just a basic Grape API example. You can see the post API specified in `a
 First we create a new Heroku application
 
     heroku create --stack cedar YOURAPPNAME
-  
+
 Next we push the code to Heroku
-  
+
     git push heroku master
-    
+
 Finally we need to migrate the database on Heroku
 
     heroku run rake db:migrate RACK_ENV=production
 
 Now you should be able to request posts from your app and get an empty array back as there are no posts saved yet.
- 
+
     curl http://YOURAPPNAME.herokuapp.com/v1/posts.json
     => []
-  
+
 Next you could use the "Adding a Post" example above to write your first post to the server.
 
 # Extras
@@ -78,15 +78,15 @@ Drop your database:
 Create your database:
 
     rake db:create
-  
+
 Migrate your database:
 
     rake db:migrate
-  
+
 Create and migrate your database:
 
     rake db:setup
-    
+
 ### On Heroku, you can:
 
 Migrate your database:
@@ -95,8 +95,8 @@ Migrate your database:
 
 # Resources
 
-* [The Grapes of Rapid](http://www.confreaks.com/videos/475-rubyconf2010-the-grapes-of-rapid) - everything you need to know about Grape
-* [Building high-performance (Ruby) web services](http://www.confreaks.com/videos/653-gogaruco2011-0-60-with-goliath-building-high-performance-ruby-web-services) - everything you need to know about Goliath
+* [The Grapes of Rapid](http://www.confreaks.com/videos/475-rubyconf2010-the-grapes-of-rapid) - everything you need to know about Grape.
+* [Building high-performance (Ruby) web services](http://www.confreaks.com/videos/653-gogaruco2011-0-60-with-goliath-building-high-performance-ruby-web-services) - everything you need to know about Goliath.
 
 # Todo
 
