@@ -14,6 +14,10 @@ First take a copy of the project
     git clone https://github.com/djones/grape-goliath-example.git
     cd grape-goliath-example/
 
+Install dependencies
+
+    bundle install
+
 Next create and migrate your database
 
     rake db:setup
