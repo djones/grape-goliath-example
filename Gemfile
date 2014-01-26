@@ -8,3 +8,4 @@ gem 'em-synchrony', :git => 'git://github.com/igrigorik/em-synchrony.git',
                             
 gem 'grape'
 gem 'goliath'
+gem 'foreman', :require => nil
