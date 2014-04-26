@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+# Get the gems compatible for Heroku's Ruby Version
+ruby '2.0.0'
+
 
 gem 'pg'
 gem 'em-postgresql-adapter', :git => 'git://github.com/leftbee/em-postgresql-adapter.git'
