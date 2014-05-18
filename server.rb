@@ -1,7 +1,10 @@
-require "rubygems"
-require "bundler/setup"
+require 'rubygems'
+require 'bundler/setup'
+
 require 'goliath'
+require 'em-synchrony'
 require 'em-synchrony/activerecord'
+require 'pg/em'
 require 'grape'
 require './app/apis/posts'
 require './app/models/post'
