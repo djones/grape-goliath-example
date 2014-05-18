@@ -1,13 +1,12 @@
-require 'rubygems'
-require 'bundler/setup'
-
 require 'goliath'
-require 'em-synchrony'
 require 'em-synchrony/activerecord'
-require 'pg/em'
 require 'grape'
+
+# replace with an load anything in app statement
 require './app/apis/posts'
 require './app/models/post'
+
+ActiveRecord::Base.establish_connection(YAML::load_file('config/database.yml'))
 
 class Application < Goliath::API
 

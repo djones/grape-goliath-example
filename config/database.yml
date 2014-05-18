@@ -1,7 +1,4 @@
-production: &production
-  adapter: postgresql
-  encoding: unicode
-  database: goliathgrape
-  pool: 5
-development:
-  <<: *production
+adapter: postgresql
+encoding: unicode
+database: goliathgrape
+pool: 5
