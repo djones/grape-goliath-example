@@ -9,7 +9,7 @@ require './app/models/post'
 
 # ERB needed because of Heroku: http://stackoverflow.com/a/18139387
 db_config = YAML.load(ERB.new(File.read(File.join('config', 'database.yml'))).result)
-ActiveRecord::Base.establish_connection(db_config)
+ActiveRecord::Base.establish_connection(db_config['production'])
 
 class Application < Goliath::API
 
