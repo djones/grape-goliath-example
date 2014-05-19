@@ -1,3 +1,4 @@
+
 require "rubygems"
 require "bundler/setup"
 require 'em-synchrony/activerecord'
@@ -20,7 +21,7 @@ namespace :db do
     Rake::Task["db:migrate"].invoke
   end
 
-  desc "migrate your database"
+  desc 'migrate your database'
   task :migrate do
     ActiveRecord::Base.establish_connection db_conf["production"]
 

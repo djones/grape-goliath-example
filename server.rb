@@ -1,15 +1,4 @@
-require 'goliath'
-require 'em-synchrony/activerecord'
-require 'grape'
-require 'erb'
-
-# Load in any app files you might add
-Dir['./app/**/*.rb'].each { |file| require file }
-
-# Connect to the database
-# ERB needed because of Heroku: http://stackoverflow.com/a/18139387
-db_config = YAML.load(ERB.new(File.read('./config/database.yml')).result)
-ActiveRecord::Base.establish_connection(db_config['production'])
+require './config/environment.rb'
 
 class Application < Goliath::API
 
