@@ -1,4 +1,4 @@
-config:
+production:
   adapter: postgresql
   encoding: unicode
   database: goliathgrape
