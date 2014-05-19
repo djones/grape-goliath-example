@@ -6,7 +6,8 @@ require 'grape'
 require './app/apis/posts'
 require './app/models/post'
 
-ActiveRecord::Base.establish_connection(YAML::load_file('config/database.yml'))
+db_config = YAML::load_file('config/database.yml')['config']
+ActiveRecord::Base.establish_connection(db_config)
 
 class Application < Goliath::API
 
