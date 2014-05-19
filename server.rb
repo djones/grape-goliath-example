@@ -1,15 +1,9 @@
-require "rubygems"
-require "bundler/setup"
-require 'goliath'
-require 'em-synchrony/activerecord'
-require 'grape'
-require './app/apis/posts'
-require './app/models/post'
+require './config/environment.rb'
 
 class Application < Goliath::API
 
   def response(env)
-    ::Posts.call(env)
+    Posts.call(env)
   end
 
 end
