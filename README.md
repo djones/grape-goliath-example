@@ -52,7 +52,7 @@ This is just a basic Grape API example. You can see the post API specified in `a
 
 First we create a new Heroku application
 
-    heroku create --stack cedar YOURAPPNAME
+    heroku create YOURAPPNAME
 
 Next we push the code to Heroku
 
@@ -60,7 +60,7 @@ Next we push the code to Heroku
 
 Finally we need to migrate the database on Heroku
 
-    heroku run rake db:migrate RACK_ENV=production
+    heroku run rake db:migrate
 
 Now you should be able to request posts from your app and get an empty array back as there are no posts saved yet.
 
@@ -95,7 +95,7 @@ Create and migrate your database:
 
 Migrate your database:
 
-    heroku run rake db:migrate RACK_ENV=production
+    heroku run rake db:migrate
 
 # Resources
 
@@ -104,8 +104,6 @@ Migrate your database:
 
 # Todo
 
-* Unify all the 'require' statements.
 * Make it work with databases other than PostgreSQL.
 * Write some tests using the API.
-* Add some example authentication.
 * Add support for multiple environments e.g. test, development and production.
